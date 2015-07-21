@@ -40,7 +40,7 @@ cacheSolve <- function(x, ...) {
         	
         	inverse    	
         } else {
-        	message("Inverse is chached! Getting cached data...")
+        	message("Inverse is cached! Getting cached inverse...")
         	
         	cache
         }
