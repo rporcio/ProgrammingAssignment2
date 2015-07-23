@@ -34,7 +34,14 @@ cacheSolve <- function(x, ...) {
         	message("Inverse is not cached! Calculating inverse...")    
         	
         	matrix <- x$get()
-        	inverse <- solve(matrix)
+        	
+        	inverse <- tryCatch({
+        		solve(matrix)
+        	},
+        	error = function(condition) {
+        		message("Couldn't calculate inverse! Matrix must be square.")
+        		NULL	
+        	})
         	
         	x$setInverse(inverse)
         	
