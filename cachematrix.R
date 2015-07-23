@@ -7,7 +7,7 @@
 ## calculated before.
 
 ## Makes a "special" matrix (list) from the given matrix, 
-## which supports getter and setter methods for both the 
+## which adds getter and setter methods to both the 
 ## matrix and its inverse.
 makeCacheMatrix <- function(x = matrix()) {
 	inverse <- NULL
